@@ -10,6 +10,7 @@ Plug 'tpope/vim-sensible'
 Plug 'bronson/vim-trailing-whitespace'
 
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
+Plug 'rdnetto/YCM-Generator'
 
 Plug 'altercation/vim-colors-solarized'
 
@@ -32,6 +33,8 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'junegunn/vim-easy-align'
 
+Plug 'bbchung/clighter'
+
 call plug#end()
 
 if (exists('+colorcolumn'))
@@ -39,14 +42,12 @@ if (exists('+colorcolumn'))
     highlight ColorColumn ctermbg=9
 endif
 
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 " -- solarized personal conf
-"set background=dark
-try
-"    colorscheme solarized
-catch
-endtry
-
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 
 
 let g:unite_source_history_yank_enable = 1
@@ -68,3 +69,9 @@ nnoremap <space>/ :Ag
 
 " Easy align interactive
 vnoremap <silent> <Enter> :EasyAlign<cr>
+nmap ga <Plug>(EasyAlign)
+
+"clighter params
+let g:clighter_libclang_file = '/usr/lib/libclang.so' 
+let g:clighter_rename_prompt_level = 0
+let g:clighter_enable_cross_rename = 0
