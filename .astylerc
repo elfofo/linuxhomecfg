@@ -1,0 +1,11 @@
+
+
+--style=stroustrup
+--indent=tab
+--pad-oper
+--pad-header
+--align-pointer=middle
+--add-brackets
+--convert-tabs
+--max-code-length=120
+--suffix=none
