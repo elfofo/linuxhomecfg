@@ -90,6 +90,7 @@ alias la='ls -A'
 alias lla='ls -la'
 alias l='ls -CF'
 alias cd..='cd ..'
+alias rmrf='rm -rf'
 alias fuck='$(thefuck $(fc -ln -1))'
 
 # Alias definitions.
