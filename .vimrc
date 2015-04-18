@@ -2,7 +2,7 @@ syntax on
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-
+set completeopt-=preview
 
 call plug#begin()
 Plug 'tpope/vim-sensible'
@@ -43,6 +43,7 @@ if (exists('+colorcolumn'))
 endif
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
 
 " -- solarized personal conf
 set background=dark
